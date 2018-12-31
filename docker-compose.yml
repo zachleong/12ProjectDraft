@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  entry-point:
+    build: ./entry-point
+    volumes:
+      - ./entry-point/conf.d:/etc/nginx/conf.d
+    ports:
+      - 5000:80
+  webapp:
+    build: ./webapp
+    volumes:
+      - ./webapp/static-html:/usr/share/nginx/html
