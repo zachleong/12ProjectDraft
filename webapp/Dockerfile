@@ -1,3 +1,7 @@
-FROM nginx:mainline
+FROM node
 WORKDIR /app
-COPY ./static-html /usr/share/nginx/html
+COPY package*.json .
+RUN npm install
+COPY . .
+
+CMD ["npm", "start"]

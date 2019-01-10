@@ -1,0 +1,24 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Year 12 web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earthospreyhd/12Project.git"
+  },
+  "author": "Zach Leong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/earthospreyhd/12Project/issues"
+  },
+  "homepage": "https://github.com/earthospreyhd/12Project#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "uuid": "^3.3.2"
+  }
+}
