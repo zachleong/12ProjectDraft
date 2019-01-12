@@ -2,8 +2,9 @@ class User {
     user_id: string;
     user_class: string;
 
-    constructor (user_class: string) {
-        this.user_id = this.user_id;
+    constructor (user_class: string, user_id: string) {
+        this.user_class = user_class;
+        this.user_id = user_id;
     }
 
     getUserID() {

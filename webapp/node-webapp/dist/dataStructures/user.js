@@ -1,8 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var User = /** @class */ (function () {
-    function User(user_class) {
-        this.user_id = this.user_id;
+    function User(user_class, user_id) {
+        this.user_class = user_class;
+        this.user_id = user_id;
     }
     User.prototype.getUserID = function () {
         return this.user_id;

@@ -1,5 +1,3 @@
-const uuid = require("uuid");
-import {User} from "../dataStructures/user";
 import {getUserFromJWT} from "../jwtHandlers/getUserFromJWT";
 
 function getUserCredentials (req, res, next) {
@@ -7,7 +5,14 @@ function getUserCredentials (req, res, next) {
     if (jwt) {
         let thisUser = getUserFromJWT(jwt);
         res.locals.user_class = thisUser.getUserClass();
-        res.locals.userid = thisUser.getUserid();
+        res.locals.userid = thisUser.getUserID();
+
+        next();
+    }
+    else {
+        let thisUser = getUserFromJWT(jwt);
+        res.locals.user_class = thisUser.getUserClass();
+        res.locals.user_id = thisUser.getUserID();
 
         next();
     }
