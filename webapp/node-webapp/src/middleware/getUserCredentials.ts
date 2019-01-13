@@ -11,7 +11,7 @@ function getUserCredentials (req, res, next) {
         // res.locals.thisUser = getUserFromJWT(jwt);
         res.redirect("/login");
 
-        next();
+        // next();
     }
 }
 

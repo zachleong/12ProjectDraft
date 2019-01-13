@@ -1,5 +1,5 @@
 function renderLogin (req, res, next) {
-    return true;
+    res.send("we are at login");
 }
 
 export {renderLogin};
