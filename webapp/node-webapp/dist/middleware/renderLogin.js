@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
 function renderLogin(req, res, next) {
-    res.send("we are at login");
+    res.render("login");
 }
 exports.renderLogin = renderLogin;

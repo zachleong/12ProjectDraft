@@ -1,5 +1,7 @@
 const express = require("express");
 const mustache = require("mustache-express");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 import {getUserCredentials} from "./middleware/getUserCredentials";
 import {renderLogin} from "./middleware/renderLogin";
@@ -10,6 +12,8 @@ import {renderIndex} from "./middleware/renderIndex";
 const app = express();
 const port = 3000;
 
+app.use(bodyParser());
+app.use(cookieParser());
 app.engine("html", mustache());
 app.set("view engine", "html");
 app.set("views", __dirname + "/../views");

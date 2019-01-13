@@ -1,10 +1,13 @@
 "use strict";
 exports.__esModule = true;
-var getUserFromJWT_1 = require("../jwtHandlers/getUserFromJWT");
+var getUserFromToken_1 = require("../jwtHandlers/getUserFromToken");
+var is_alive_1 = require("./is_alive");
 function getUserCredentials(req, res, next) {
-    var jwt = req.get("auth");
-    if (jwt) {
-        res.locals.thisUser = getUserFromJWT_1.getUserFromJWT(jwt);
+    if (req.cookies.token && is_alive_1.is_alive(req.cookies.token)) {
+        var token = req.cookies.token;
+        var user_name = req.cookies.user;
+        var password = req.cookies.pass;
+        res.locals.thisUser = getUserFromToken_1.getUserFromToken(token, user_name, password);
         next();
     }
     else {

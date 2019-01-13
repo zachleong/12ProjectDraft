@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var express = require("express");
 var mustache = require("mustache-express");
+var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
 var getUserCredentials_1 = require("./middleware/getUserCredentials");
 var renderLogin_1 = require("./middleware/renderLogin");
 var authenticate_1 = require("./middleware/authenticate");
@@ -9,6 +11,8 @@ var renderIndex_1 = require("./middleware/renderIndex");
 // import { userInfo } from "os";
 var app = express();
 var port = 3000;
+app.use(bodyParser());
+app.use(cookieParser());
 app.engine("html", mustache());
 app.set("view engine", "html");
 app.set("views", __dirname + "/../views");
