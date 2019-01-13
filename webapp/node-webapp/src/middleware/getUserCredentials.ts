@@ -8,7 +8,8 @@ function getUserCredentials (req, res, next) {
         next();
     }
     else {
-        res.locals.thisUser = getUserFromJWT(jwt);
+        // res.locals.thisUser = getUserFromJWT(jwt);
+        res.redirect("/login");
 
         next();
     }
