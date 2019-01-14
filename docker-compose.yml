@@ -8,6 +8,4 @@ services:
     ports:
       - 5000:80
   webapp:
-    build: ./webapp
-    volumes:
-      - ./webapp/static-html:/usr/share/nginx/html
+    build: ./webapp/node-webapp
