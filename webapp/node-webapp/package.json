@@ -4,6 +4,7 @@
   "description": "Year 12 web application",
   "main": "dist/app.js",
   "scripts": {
+    "start": "tsc -p .; node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

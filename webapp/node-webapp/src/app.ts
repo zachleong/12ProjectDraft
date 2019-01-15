@@ -12,7 +12,8 @@ import {renderIndex} from "./middleware/renderIndex";
 const app = express();
 const port = 3000;
 
-app.use(bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.engine("html", mustache());
 app.set("view engine", "html");
