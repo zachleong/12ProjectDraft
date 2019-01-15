@@ -9,3 +9,5 @@ services:
       - 5000:443
   webapp:
     build: ./webapp/node-webapp
+    volumes:
+      - ./webapp/node-webapp:/app
