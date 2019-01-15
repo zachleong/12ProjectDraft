@@ -4,8 +4,11 @@
     "outDir": "dist",
     // "sourceMap": true //helps with debugging
   },
-  "files": [
-    "src/app.ts",
-    "src/middleware/getUserCredentials.ts",
-  ],
+//   "files": [
+//     "src/app.ts",
+//     "src/middleware/getUserCredentials.ts",
+//   ],
+  "include": [
+      "src/*",
+  ]
 }
