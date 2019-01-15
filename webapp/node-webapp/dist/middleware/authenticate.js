@@ -2,7 +2,6 @@
 exports.__esModule = true;
 var uuid = require("uuid");
 function authenticate(req, res, next) {
-    console.log(req.body);
     res.cookie("token", uuid());
     res.cookie("user", req.body.Username);
     res.cookie("pass", req.body.Password);

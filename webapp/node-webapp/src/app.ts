@@ -7,7 +7,6 @@ import {getUserCredentials} from "./middleware/getUserCredentials";
 import {renderLogin} from "./middleware/renderLogin";
 import {authenticate} from "./middleware/authenticate";
 import {renderIndex} from "./middleware/renderIndex";
-// import { userInfo } from "os";
 
 const app = express();
 const port = 3000;

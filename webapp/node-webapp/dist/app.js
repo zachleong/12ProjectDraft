@@ -8,7 +8,6 @@ var getUserCredentials_1 = require("./middleware/getUserCredentials");
 var renderLogin_1 = require("./middleware/renderLogin");
 var authenticate_1 = require("./middleware/authenticate");
 var renderIndex_1 = require("./middleware/renderIndex");
-// import { userInfo } from "os";
 var app = express();
 var port = 3000;
 app.use(bodyParser.json());
