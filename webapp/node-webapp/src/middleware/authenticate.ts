@@ -8,4 +8,4 @@ function authenticate (req, res, next) {
     res.redirect("/");
 }
 
-export {authenticate};
+export { authenticate };

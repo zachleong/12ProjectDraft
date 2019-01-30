@@ -1,5 +1,5 @@
-import {getUserFromToken} from "../jwtHandlers/getUserFromToken";
-import {is_alive} from "./is_alive";
+import { getUserFromToken } from "../jwtHandlers/getUserFromToken";
+import { is_alive } from "./is_alive";
 
 function getUserCredentials (req, res, next) {
     if (req.cookies.token && is_alive(req.cookies.token)) {
@@ -16,4 +16,4 @@ function getUserCredentials (req, res, next) {
     }
 }
 
-export {getUserCredentials};
+export { getUserCredentials };

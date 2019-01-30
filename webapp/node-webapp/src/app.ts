@@ -3,10 +3,10 @@ const mustache = require("mustache-express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-import {getUserCredentials} from "./middleware/getUserCredentials";
-import {renderLogin} from "./middleware/renderLogin";
-import {authenticate} from "./middleware/authenticate";
-import {renderIndex} from "./middleware/renderIndex";
+import { getUserCredentials } from "./middleware/getUserCredentials";
+import { renderLogin } from "./middleware/renderLogin";
+import { authenticate } from "./middleware/authenticate";
+import { renderIndex } from "./middleware/renderIndex";
 
 const app = express();
 const port = 3000;
