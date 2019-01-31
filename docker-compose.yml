@@ -6,7 +6,7 @@ services:
     volumes:
       - ./entry-point/conf.d:/etc/nginx/conf.d
     ports:
-      - 5000:443
+      - 5000:80
   webapp:
     build: ./webapp/node-webapp
     volumes:
